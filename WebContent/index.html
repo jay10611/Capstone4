@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Demo</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<div class="container">
+ 
+	<h1>My childhood shopping app</h1>
+	<p>Here's a few things from my childhood, don't get it twisted I'm
+		not actually gonna sell them.</p>
+	<div id="alerts"></div>
+	<div class="productcont">
+		<div class="product" >
+			<h3 class="productname">Nintendo 64</h3>
+			<p>Nintendo 64 need I say more</p>
+			<p class="price">$75.00</p>
+			<button  onClick="addToCart('Nintendo 64 console', 75)" class="addtocart">Add To Cart</button>
+		</div>
+		<div class="product">
+			<h3 class="productname">The Legend of Zelda: Ocarina of Time</h3>
+			<p>Greatest game ever</p>
+			<p class="price">$45.00</p>
+			<button  onClick="addToCart('The Legend of Zelda', 45)" class="addtocart">Add To Cart</button>
+		</div>
+		<div class="product">
+			<h3 class="productname">Gold Nintendo 64 controller</h3>
+			<p>Yes I still have this</p>
+			<p class="price">$35.50</p>
+			<button  onClick="addToCart('Gold Nintendo 64 controller', 35.50)" class="addtocart">Add To Cart</button>
+		</div>
+	</div>
+	<div class="cart-container">
+		<h2>Cart</h2>
+		<div class="cart-buttons">
+			<button onClick="checkOutAlert()" id="checkout">Checkout</button>
+		</div>
+		<hr>
+		<table id="carttotals">
+			<tr>
+				<td><strong>Items</strong></td>
+				<td><strong>Total</strong></td>
+				<td><strong>Tax</strong></td>
+				<td><strong>Total+Tax</strong></td>
+			</tr>
+			<tr>
+				<td>x <span id="itemsQuantity">0</span></td>
+
+				<td>$<span id="total">0</span></td>
+				<td>$<span id="tax">0</span></td>
+				<td>$<span id="totalPlusTax">0</span></td>
+			</tr>
+		</table>
+		
+		<table>
+			<thead class = "checkoutContainer" id= "displayLocation">
+				<tr>
+					<th><strong>Product</strong></th>
+					<th><strong>Price</strong></th>
+				</tr>
+			</thead>
+			<tbody id="carttable">
+			</tbody>
+		</table>
+
+		
+
+		
+	</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
